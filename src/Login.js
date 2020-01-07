@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Custom.css';
 import axios from 'axios'
+import Carousel from "react-multi-carousel";
 
 class Login extends Component {
   constructor() {
@@ -43,7 +44,7 @@ class Login extends Component {
         localStorage.setItem('token', res.data.token);
         this.props.history.push("/dashboard");
       });
- 
+
 
     return this.setState({ error: '' });
   }
@@ -61,6 +62,8 @@ class Login extends Component {
   }
 
   render() {
+    const css = "margin:5px; border:solid red;";
+
     return (
         <div className="wrapper fadeInDown">
         <div id="formContent">
@@ -73,13 +76,15 @@ class Login extends Component {
           {
             this.state.error &&
             <h3 data-test="error" className="alert alert-danger" onClick={this.dismissError}>
-              {this.state.error}  
+              {this.state.error}
               <button className='btn btn-link btn-sm'  onClick={this.dismissError}>✖</button>
             </h3>
           }
             <input type="email" required id="login" className="fadeIn second" name="login" placeholder="username@mail.com" data-test="username" value={this.state.username} onChange={this.handleUserChange} />
             <input type="password" id="password" className="fadeIn third" name="login" placeholder="********" data-test="password" value={this.state.password} onChange={this.handlePassChange} />
             <button className="btn btn-primary btn-md fadeIn fourth">Login</button>
+
+            <a style={{margin:"5px",color:"#fff"}} href={"carousel"} className="btn btn-primary btn-md fadeIn fourth">Carousel</a>
             <br/>
             <br/>
           </form>

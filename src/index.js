@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import Login from './Login';
 import Dashboard from './Dashboard';
+import Carousel from './Carousel';
 
 
 ReactDOM.render(
@@ -13,7 +14,8 @@ ReactDOM.render(
         <Switch>
             <Route path="/" exact={true} component={Login} />
             <Route path="/login" component={Login} />
-            <Route path="/dashboard" component={Dashboard} />       
+            <Route path="/dashboard" component={Dashboard} />
+            <Route path="/carousel" component={Carousel} />
         </Switch>
     </ BrowserRouter>
     , document.getElementById('root'));
