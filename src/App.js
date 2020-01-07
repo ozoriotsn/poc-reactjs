@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+class App extends Component {
+  state = {
+    loggedIn: false,
+  };
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  render() {
+
+
+    return (
+      <div className='container'>
+       <div className='row'>
+
+<div className='col-lg-12 text-center'>
+  
+  <br></br>
+  <a className='btn btn-primary' href='/login'>Entrar</a></div>
+
+       </div>
+      </div>
+    );
+  }
 }
 
 export default App;
